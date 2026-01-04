@@ -9,23 +9,23 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Clean, premium font stack */
-            background-color: #0a0a0a; /* Deep luxury black */
-            color: #f5f5f5; /* Soft white for readability */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
             overflow-x: hidden;
         }
 
         /* --- NAVIGATION --- */
-        <nav>
-        <div class="logo">Glumera</div>
-        <div class="nav-links">
-            <a href="shop.html">Shop</a>
-            <a href="about.html">Science & Story</a>
-            <a href="journal.html">Journal</a>
-            <a href="login.html">Login</a>
-            <a href="cart.html">Cart (0)</a>
-        </div>
-    </nav>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
 
         .logo {
             font-size: 1.5rem;
@@ -34,6 +34,7 @@
             text-transform: uppercase;
         }
 
+        /* DESKTOP MENU */
         .nav-links a {
             color: #f5f5f5;
             text-decoration: none;
@@ -60,11 +61,11 @@
         }
 
         h1 {
-            font-size: 4rem; /* Big, bold text like Nike */
+            font-size: 4rem;
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 20px;
-            opacity: 0; /* Hidden for animation */
+            opacity: 0;
             animation: fadeInMoveUp 1.2s ease-out forwards;
         }
 
@@ -86,7 +87,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-radius: 50px; /* Pill shape for modern feel */
+            border-radius: 50px;
             transition: transform 0.3s, box-shadow 0.3s;
             opacity: 0;
             animation: fadeInMoveUp 1.2s ease-out 0.8s forwards;
@@ -107,7 +108,9 @@
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             nav { padding: 20px; }
-            .nav-links { display: none; /* Hide menu links on mobile for now */ }
+            .nav-links { 
+                display: none; /* Keeps menu hidden on small phones for now */
+            }
         }
     </style>
 </head>
@@ -116,16 +119,17 @@
     <nav>
         <div class="logo">Glumera</div>
         <div class="nav-links">
-            <a href="#">Shop</a>
-            <a href="#">Science</a>
-            <a href="#">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">Science</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart (0)</a>
         </div>
     </nav>
 
     <section class="hero">
         <h1>BEYOND <br> RADIANCE.</h1>
         <p>The purest glutathione formulation for timeless skin clarity.</p>
-        <a href="#" class="btn-primary">Discover Glumera</a>
+        <a href="shop.html" class="btn-primary">Discover Glumera</a>
     </section>
 
 </body>
