@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glumera | Unlock Your Radiance</title>
+    <style>
+        /* --- RESET & BASIC SETUP --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Clean, premium font stack */
+            background-color: #0a0a0a; /* Deep luxury black */
+            color: #f5f5f5; /* Soft white for readability */
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: #f5f5f5;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover { opacity: 1; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+        }
+
+        h1 {
+            font-size: 4rem; /* Big, bold text like Nike */
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            opacity: 0; /* Hidden for animation */
+            animation: fadeInMoveUp 1.2s ease-out forwards;
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            color: #aaa;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInMoveUp 1.2s ease-out 0.4s forwards;
+        }
+
+        /* --- CTA BUTTON --- */
+        .btn-primary {
+            padding: 15px 40px;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px; /* Pill shape for modern feel */
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            animation: fadeInMoveUp 1.2s ease-out 0.8s forwards;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInMoveUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav { padding: 20px; }
+            .nav-links { display: none; /* Hide menu links on mobile for now */ }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Glumera</div>
+        <div class="nav-links">
+            <a href="#">Shop</a>
+            <a href="#">Science</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>BEYOND <br> RADIANCE.</h1>
+        <p>The purest glutathione formulation for timeless skin clarity.</p>
+        <a href="#" class="btn-primary">Discover Glumera</a>
+    </section>
+
+</body>
+</html>
